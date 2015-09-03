@@ -1,0 +1,21 @@
+// Nombre:AreaTriangulo
+// Autor: Oscar Diego Ortiz Borda
+// Fecha:02/09/15
+
+#include "stdafx.h" //Libreria	
+#include "conio.h" //Librearia
+#include <iostream> //Libreria
+
+using namespace std; // La entrada del teclado
+
+void main() 
+{
+   float A,B,H; //Declaracion de las bases
+   cout<<"Ingrese base: "; //Pide la variable
+   cin>>B; //Asignacion de variable
+   cout<<"Ingrese altura: "; // Pide la variable
+   cin>>H; //Asignacion de variable
+   A=(B*H)/2; //La formula con la que voy a trabajar
+   cout<<"El area es: "<<A<<endl; // Muestra el resultado
+   getch(); //Da pausa al programa
+}
