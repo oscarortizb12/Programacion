@@ -2,18 +2,18 @@
 // Autor: Oscar Diego Ortiz Borda
 // Fecha:02/09/15
 
-#include "stdafx.h" //Libreria	
-#include "conio.h" //Librearia
-#include <iostream> //Libreria
+#include "stdafx.h" //Libreria del Visual C++
+#include "conio.h" //Librearia para manejar la entrada y getch()
+#include <iostream> //Libreria para la entrada y salida cin,cout
 
 using namespace std; // La entrada del teclado
 
 void main() 
 {
    float A,B,H; //Declaracion de las bases
-   cout<<"Ingrese base: "; //Pide la variable
+   cout<<"Ingrese base: "; //Solicita la variable
    cin>>B; //Asignacion de variable
-   cout<<"Ingrese altura: "; // Pide la variable
+   cout<<"Ingrese altura: "; // Solicita la variable
    cin>>H; //Asignacion de variable
    A=(B*H)/2; //La formula con la que voy a trabajar
    cout<<"El area es: "<<A<<endl; // Muestra el resultado
