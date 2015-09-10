@@ -1,0 +1,22 @@
+// Votacion.cpp : Defines the entry point for the console application.
+// Nombre: Oscar Diego Ortiz Borda
+// Fecha: 10/09/2015
+
+#include "stdafx.h"
+#include <conio.h>
+#include "iostream"
+using namespace std;
+
+
+void main()
+{
+	int edad;
+    cout<<"Ingrese la edad: ";
+	cin>>edad;
+	if(edad>=18)
+		cout<<"Puede votar"<<endl;
+	else
+		cout<<"No puede votar"<<endl;
+	getch();
+}
+
