@@ -14,7 +14,7 @@ void main()
 	cin>> b;
 	while(b!=0)
 	{ 
-	    cout<< "ingrese la la altura: "<<endl;
+	    cout<< "ingrese la altura: "<<endl;
 	    cin>>h;
 	    p=(b*h)/2;
 	    cout<< "el area es: " <<p<<endl;
