@@ -1,0 +1,30 @@
+// Programa de AFP.cpp : Defines the entry point for the console application.
+// Nombres: Oscar Diego Ortiz Borda
+Fecha:01/10/2015
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+using namespace std;
+
+
+void main()
+{
+	int n,i;
+	float Sueldo,Suma=0,AFP;
+	cout<<"Ingrese el numero de empleados:";
+	cin>>n;
+	for(i=1;i<=n;i++)
+	{	cout<<"ingrese el sueldo del empleado:"<<i<<": "<<endl;
+	    cin>>Sueldo;
+		if(Sueldo>=(2*1656))
+			AFP=Sueldo*0.12;
+		else
+			AFP=Sueldo*0.03;
+		cout<<"El impuesto a pagar del empleado es:"<<i<<":"<<AFP<<endl;
+		Suma=Suma+AFP;
+	}
+	cout<<"El impuesto total a pagar es: "<<Suma<<endl;
+	getch();
+}
+
