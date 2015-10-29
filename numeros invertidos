@@ -1,0 +1,52 @@
+// Autor: Oscar Diego Ortiz Borda
+// Fecha: 29/10/2015
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#define MAX 100
+
+using namespace std;
+
+void cargar (double a[], int tamano);
+void mostrar (double a[], int tamano);
+void invertir (double a[], int tamano);
+
+void main()
+{
+	int N;
+	double a[MAX];
+	do{
+		cout<<"Ingrese el numero de elementos maximo: ";
+		cin >> N;
+	}while((N<=0)||(N>100));
+	cargar (a,N);
+	invertir (a,N);
+	cout<<"Los numeros son: "<<endl;
+	mostrar (a,N);
+	getch();
+}
+
+void cargar (double a[], int tamano)
+{
+	for(int i=0; i<tamano; i++)
+	{
+		cout<<"a["<<i<<"] ";
+		cin>>a[i];
+	}
+}
+void mostrar (double a[], int tamano)
+{
+	for(int i=0; i<tamano; i++)
+		cout<<"a["<<i<<"] "<<a[i]<<endl;
+}
+void invertir (double a[], int tamanio)
+{
+	
+	for(int i=0; i<tamanio/2; i++)
+	{ int aux;
+		aux=a[i];
+		a[i]=a[tamanio-1-i];
+		a[tamanio-1-i]=aux;
+	}
+}
