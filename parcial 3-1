@@ -1,0 +1,42 @@
+// examen1.cpp : Defines the entry point for the console application.
+// Nomnre: Oscar Diego Ortiz Borda
+// Fecha: 12/11/15
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#define MAX 100
+
+using namespace std;
+int cargar(int vect[],int n);
+void mostrar(int vect[],int n);
+
+void main()
+{int s=0,n,sig;
+int vect[MAX];
+cout<<"Ingrese hasta que numero quiere la sumatoria:"<<endl;
+cin>>n;
+s=cargar(vect,n);
+mostrar(vect,s);
+getch();
+}
+
+int cargar(int vect[],int n)
+{float s=0,sig;
+sig=-1;
+int j=0;
+for(int i=2;i<=n;i=i+2)
+	{
+		vect[j]=sig*i;
+		sig=-sig;
+		j++;
+	}
+return j;
+}
+void mostrar(int vect[],int n)
+{
+	for(int i=0;i<=n;i++)
+	{
+		cout<<"Vect["<<i<<"]"<<vect[i]<<endl;
+	}
+}
