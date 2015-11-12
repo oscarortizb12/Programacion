@@ -1,0 +1,56 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "math.h"
+#define MAX 100
+
+
+using namespace std;
+void cargar (float vec[],int n, float x);
+void mostrar (float vec[],int n);
+void sumar (float vec[], int n, float &acum);
+
+void main()
+{
+	float x, resultado, vec[MAX];
+   int n,s;
+
+   cout<<"Ingrese la base: ";
+   cin>> n;
+   cout<<"Ingrese hasta que exponencial calcular: ";
+   cin>> x;
+   cargar (vec,n,x);
+   mostrar (vec,n);
+   sumar (vec,n,resultado); 
+   cout<<"El resultado de la seri es : "<<resultado;
+   getch();
+}
+
+ void cargar (float vec[],int n, float x)
+ {
+	int j, fac=1;
+	vec[0]=2;
+   j=0;
+   for (int i=1;i<=n;i++)
+   {
+      vec[i]= pow(x,i)/fac;
+	  fac=fac*(i+1);
+   }
+   
+ }
+ void mostrar (float vec[],int n)
+ {
+	 for (int i=0;i<n;i++)
+		 cout<<"vec["<<i<<"]= "<<vec [i]<<endl;
+ }
+   
+ void sumar (float vec[], int n, float &acum)
+
+ {
+	 acum=0;
+	 for (int i=0;i<n;i++)
+		 acum=acum+vec[i];
+   
+   
+ }
+   
